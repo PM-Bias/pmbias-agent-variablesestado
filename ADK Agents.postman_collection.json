@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "caf10e47-44df-4fbf-81cb-7261e8ef8c9e",
+		"name": "ADK Agents",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24780304"
+	},
+	"item": [
+		{
+			"name": "listApps",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/list-apps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"list-apps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSession",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjA3YjgwYTM2NTQyODUyNWY4YmY3Y2QwODQ2ZDc0YThlZTRlZjM2MjUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAyOTMyODQwMTMzNjA5NzAwMDU0IiwiZW1haWwiOiJtYXppdGhlc2FnZUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6ImtEWXhDMkYyYjF1TXFnNVJlR1VDZ1EiLCJpYXQiOjE3NDY0NTgxNjAsImV4cCI6MTc0NjQ2MTc2MH0.AkbXiAoiB599WNgViooA9_RnfASAdniJDH20iRIx2J7qHp6TW3cVrV_oQPt8Di-nC8y9BA4ldoMzEcuOBuaYVvt_q9YFiaeTiFs16WwzMWladnS_rvstOVJeYr4qzHqWCNvAyh4uWe25QPePq0t6C2z-IGSYacOtPmBTmMsEIHv2by2Fdfr0Rr8ZQPN7E93fEFjhPHtAZUN458MH9Bg612m6diXmdDk1uTVScToqR7r7eb0kQu9oudCeJsc2JQnixmKot8C2XmQxWGAJVinbCGwuziibzSJbxQGwAOepcrCNaeBES7X5KE-t8QIpMWU4dkusicbLrdGo3ix5waLZug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"state\": {\r\n\t\"preferred_language\": \"English\", //example\r\n\t\"visit_count\": 5\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pmbias-testagent-service-399028267728.us-east1.run.app/apps/pmbias_testagent/users/test124/sessions/0991",
+					"protocol": "https",
+					"host": [
+						"pmbias-testagent-service-399028267728",
+						"us-east1",
+						"run",
+						"app"
+					],
+					"path": [
+						"apps",
+						"pmbias_testagent",
+						"users",
+						"test124",
+						"sessions",
+						"0991"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_sse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjA3YjgwYTM2NTQyODUyNWY4YmY3Y2QwODQ2ZDc0YThlZTRlZjM2MjUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAyOTMyODQwMTMzNjA5NzAwMDU0IiwiZW1haWwiOiJtYXppdGhlc2FnZUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6ImtEWXhDMkYyYjF1TXFnNVJlR1VDZ1EiLCJpYXQiOjE3NDY0NTgxNjAsImV4cCI6MTc0NjQ2MTc2MH0.AkbXiAoiB599WNgViooA9_RnfASAdniJDH20iRIx2J7qHp6TW3cVrV_oQPt8Di-nC8y9BA4ldoMzEcuOBuaYVvt_q9YFiaeTiFs16WwzMWladnS_rvstOVJeYr4qzHqWCNvAyh4uWe25QPePq0t6C2z-IGSYacOtPmBTmMsEIHv2by2Fdfr0Rr8ZQPN7E93fEFjhPHtAZUN458MH9Bg612m6diXmdDk1uTVScToqR7r7eb0kQu9oudCeJsc2JQnixmKot8C2XmQxWGAJVinbCGwuziibzSJbxQGwAOepcrCNaeBES7X5KE-t8QIpMWU4dkusicbLrdGo3ix5waLZug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"app_name\": \"pmbias_testagent\",\r\n    \"user_id\": \"test124\",\r\n    \"session_id\": \"0991\",\r\n    \"new_message\": {\r\n        \"role\": \"user\",\r\n        \"parts\": [{\r\n        \"text\": \"what is the time in new york\"\r\n        }]\r\n    },\r\n    \"streaming\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pmbias-testagent-service-399028267728.us-east1.run.app/run_sse",
+					"protocol": "https",
+					"host": [
+						"pmbias-testagent-service-399028267728",
+						"us-east1",
+						"run",
+						"app"
+					],
+					"path": [
+						"run_sse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listSession",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/apps/test_agent/users/test125/sessions/0999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apps",
+						"test_agent",
+						"users",
+						"test125",
+						"sessions",
+						"0999"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
