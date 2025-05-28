@@ -50,6 +50,41 @@ This agent demonstrates how to access and modify custom session state values tha
 4. **update_local_lastname** - Updates an existing lastname in "userdata"
 5. **read_local_lastname** - Reads the current lastname from "userdata"
 
+## Testing the Agent
+
+### Option 1: Using Postman (Recommended)
+
+For easier testing, import the provided Postman collection:
+
+1. **Import the collection**: 
+   - Open Postman
+   - Import `ADK Agents.postman_collection.json` from this directory
+   - The collection includes all necessary requests pre-configured
+
+2. **Available requests in the collection**:
+   - **listApps**: List all available apps
+   - **createSession**: Create a session with custom state
+   - **run_sse**: Send messages to the agent
+   - **listSession**: Get complete session details
+
+3. **Update the URLs**: 
+   - For local testing: Change URLs to `http://localhost:8000`
+   - For production: Use your actual Cloud Run service URL
+
+4. **Modify the session creation request**:
+   ```json
+   {
+     "state": {
+       "test_number": 95
+     },
+     "userdata": {
+       "user_name": "miguel"
+     }
+   }
+   ```
+
+### Option 2: Using cURL Commands
+
 ## Testing the Agent Locally
 
 ### Step 1: Run the agent
